@@ -1,4 +1,4 @@
-package study.javacoding.chapter02.problem072;
+package study.javacoding.chapter03.problem072;
 
 import java.time.*;
 import java.util.Date;

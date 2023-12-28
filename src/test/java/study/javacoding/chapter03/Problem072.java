@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
-import study.javacoding.chapter02.problem072.DateConverters;
+import study.javacoding.chapter03.problem072.DateConverters;
 
 import java.time.*;
 import java.util.Date;
