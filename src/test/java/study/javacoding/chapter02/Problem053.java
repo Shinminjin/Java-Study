@@ -35,7 +35,7 @@ public class Problem053 {
         // 복사 시, Radius 의 heap 주소 값이 변하지 않는 것을 확인할 수 있음
         log.info("Point1, (x, y, radius): ({}, {}, {})", point1.getX(), point1.getY(), point1.getRadius()); // Radius@2c5529ab
         log.info("Clone1, (x, y, radius): ({}, {}, {})", clone1.getX(), clone1.getY(), clone1.getRadius()); // Radius@2c5529ab
-        assertThat(point1.getRadius().hashCode()).isEqualTo(point1.getRadius().hashCode());
+        assertThat(point1.getRadius().hashCode()).isEqualTo(clone1.getRadius().hashCode());
 
         // point1 수정
         point1.setX(10);
@@ -68,7 +68,7 @@ public class Problem053 {
         // 복사 시, Radius 의 heap 주소 값이 변하지 않는 것을 확인할 수 있음
         log.info("Point2, (x, y, radius): ({}, {}, {})", point2.getX(), point2.getY(), point2.getRadius()); // Radius@2631f68c
         log.info("Clone2, (x, y, radius): ({}, {}, {})", clone2.getX(), clone2.getY(), clone2.getRadius()); // Radius@2631f68c
-        assertThat(point2.getRadius().hashCode()).isEqualTo(point2.getRadius().hashCode());
+        assertThat(point2.getRadius().hashCode()).isEqualTo(clone2.getRadius().hashCode());
 
         // point2 수정
         point2.setX(10);
@@ -101,7 +101,7 @@ public class Problem053 {
         // 복사 시, Radius 의 heap 주소 값이 변하지 않는 것을 확인할 수 있음
         log.info("Point3, (x, y, radius): ({}, {}, {})", point3.getX(), point3.getY(), point3.getRadius()); // Radius@51972dc7
         log.info("Clone3, (x, y, radius): ({}, {}, {})", clone3.getX(), clone3.getY(), clone3.getRadius()); // Radius@51972dc7
-        assertThat(point3.getRadius().hashCode()).isEqualTo(point3.getRadius().hashCode());
+        assertThat(point3.getRadius().hashCode()).isEqualTo(clone3.getRadius().hashCode());
 
         // point3 수정
         point3.setX(10);
@@ -134,7 +134,7 @@ public class Problem053 {
         // 복사 시, Radius 의 heap 주소 값이 변함 -> 깊은 복사 확인
         log.info("Point4, (x, y, radius): ({}, {}, {})", point4.getX(), point4.getY(), point4.getRadius()); // Radius@59cba5a
         log.info("Clone4, (x, y, radius): ({}, {}, {})", clone4.getX(), clone4.getY(), clone4.getRadius()); // Radius@71329995
-        assertThat(point4.getRadius().hashCode()).isEqualTo(point4.getRadius().hashCode());
+        assertThat(point4.getRadius().hashCode()).isNotEqualTo(clone4.getRadius().hashCode());
 
         // point4 수정
         point4.setX(10);
@@ -181,7 +181,7 @@ public class Problem053 {
         // 복사 시, Radius 의 heap 주소 값이 변함 -> 깊은 복사 확인
         log.info("Point5, (x, y, radius): ({}, {}, {})", point5.getX(), point5.getY(), point5.getRadius()); // Radius@531f4093
         log.info("Clone5, (x, y, radius): ({}, {}, {})", clone5.getX(), clone5.getY(), clone5.getRadius()); // Radius@62ef27a8
-        assertThat(point5.getRadius().hashCode()).isEqualTo(point5.getRadius().hashCode());
+        assertThat(point5.getRadius().hashCode()).isNotEqualTo(clone5.getRadius().hashCode());
 
         // point5 수정
         point5.setX(10);
@@ -221,7 +221,7 @@ public class Problem053 {
         // 복사 시, Radius 의 heap 주소 값이 변함 -> 깊은 복사 확인
         log.info("Point6, (x, y, radius): ({}, {}, {})", point6.getX(), point6.getY(), point6.getRadius()); // Radius@531f4093
         log.info("Clone6, (x, y, radius): ({}, {}, {})", clone6.getX(), clone6.getY(), clone6.getRadius()); // Radius@62ef27a8
-        assertThat(point6.getRadius().hashCode()).isEqualTo(point6.getRadius().hashCode());
+        assertThat(point6.getRadius().hashCode()).isNotEqualTo(clone6.getRadius().hashCode());
 
         // point6 수정
         point6.setX(10);
